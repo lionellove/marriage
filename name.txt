@@ -1,0 +1,4 @@
+Name,age,hobby             
+Olin,32,animation,physics
+Tina,18,painting,ie
+Sam,18,basketball,Csgo
