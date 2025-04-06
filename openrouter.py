@@ -36,7 +36,7 @@ def call_api(content):
             ]
         }
         headers = {
-            "Authorization": "Bearer sk-ertpnirztciunaozcaspcsrbmeeddzfapmykvckkpjuouxfc",
+            "Authorization": "Bearer<token>",  
             "Content-Type": "application/json"
         }
 
@@ -49,10 +49,10 @@ def call_api(content):
         result = response.json()
         
         # 提取模型返回内容
-        if "choices" in result and len(result["choices"]) > 0:
+        if "choices" in result and len(result["choices"]) > 0:  
             return result["choices"][0]["message"]["content"]
         else:
-            return "ERROR: Invalid response format"
+            return "ERROR: Invalid response format"  
     except Exception as e:
         # 简化错误处理，任何错误都返回默认值
         print(f"API调用错误: {str(e)}")
